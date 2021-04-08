@@ -19,6 +19,7 @@ public class UserService {
 
     public int addUser(User user){
         int id = userRepo.save(user).getId();
+
         return id;
 
     }
@@ -27,6 +28,7 @@ public class UserService {
         User user = userRepo.getOne(id);
          userRepo.delete(user);
     }
+
 
     public Optional<User> searchUserById(int id){
         Optional<User> user = userRepo.findById(id);

@@ -1,8 +1,14 @@
 package fr.project.store.Entites;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.io.Serializable;
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
 @Entity
+@Data
 public class Product implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -10,61 +16,20 @@ public class Product implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private String stock;
+    private String sku;
+    private String image;
+    private boolean active; //if it's active in the catalogue
+    @Column(name="stock_units")
+    private int stockUnites;
     private String description;
-    private double price;
+    @Column(name="unit_price")
+    private BigDecimal unitPrice;
+    @Column(name="date_created")
+    private LocalDate dateCreated;
+    @Column(name="date_modified")
+    private LocalDate last_modified;
     @ManyToOne
     private Category category;
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getStock() {
-        return stock;
-    }
-
-    public void setStock(String stock) {
-        this.stock = stock;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
 }
