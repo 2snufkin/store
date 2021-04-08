@@ -29,10 +29,7 @@ public class AddControler {
 
     @PostMapping(path = "/addUser")
     public String addUser(User user){
-        user.setEmail("email");
-        user.setUserName("snuf");
-        user.setPassword("password");
-       int a =  userService.addUser(user);
+            int a =  userService.addUser(user);
         return "add";
     }
 }
