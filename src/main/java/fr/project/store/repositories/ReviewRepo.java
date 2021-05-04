@@ -1,6 +1,6 @@
-package fr.project.store.Repositories;
+package fr.project.store.repositories;
 
-import fr.project.store.Entites.Review;
+import fr.project.store.entites.Review;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

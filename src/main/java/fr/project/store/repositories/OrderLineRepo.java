@@ -1,6 +1,6 @@
-package fr.project.store.Repositories;
+package fr.project.store.repositories;
 
-import fr.project.store.Entites.OrderLine;
+import fr.project.store.entites.OrderLine;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

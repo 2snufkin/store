@@ -1,6 +1,6 @@
-package fr.project.store.Repositories;
+package fr.project.store.repositories;
 
-import fr.project.store.Entites.User;
+import fr.project.store.entites.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

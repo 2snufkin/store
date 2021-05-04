@@ -1,4 +1,4 @@
-package fr.project.store.Entites;
+package fr.project.store.entites;
 
 import lombok.Data;
 
