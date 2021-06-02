@@ -3,7 +3,6 @@ package fr.project.store.entites;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.util.Set;
 
 
@@ -16,15 +15,8 @@ public  class User {
     private int id;
     private String firstName;
     private String lastName;
-    @Column (name = "user_name", unique = true)
-    private String userName;
     @Column(unique = true)
     private String email;
-    private String password;
-    @Enumerated(value = EnumType.STRING)
-    private Role role;
-    private LocalDate inscriptionDate;
-
     @OneToMany(mappedBy = "user")
     private Set<Orders> orders;
 

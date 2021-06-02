@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @CrossOrigin("http://localhost:4200")
 public interface ProductRepo extends JpaRepository<Product,Integer> {
 
-    Page<Product> findProductByCategory_Id(@RequestParam("id") int id, Pageable pageable);
+      Page<Product> findProductByCategory_Id(@RequestParam("id") int id, Pageable pageable);
       Page<Product>  findProductsByNameContaining(@RequestParam("name") String name, Pageable pageable);
       Page<Product>  findProductById(@RequestParam("id") int id,Pageable pageable);
 
